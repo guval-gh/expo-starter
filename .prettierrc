@@ -5,5 +5,17 @@
   "bracketSpacing": true,
   "singleQuote": true,
   "semi": false,
-  "printWidth": 100
+  "printWidth": 100,
+  "importOrder": [
+    "^(react|react-native)$",
+    "^(@react-navigation|expo-router)",
+    "^(expo)",
+    "^[a-zA-Z]",
+    "^(@/constants|@/stores|@/types|@/hooks|@/utils)",
+    "^(@/app|@/assets|@/components)",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

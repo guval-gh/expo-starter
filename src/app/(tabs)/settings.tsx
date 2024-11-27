@@ -2,18 +2,16 @@ import { Pressable, StyleSheet } from 'react-native'
 
 import { useTranslation } from 'react-i18next'
 
+import { useSettingsStore } from '@/hooks/useSettingsStore'
+
 import ParallaxScrollView from '@/components/ParallaxScrollView'
 import { ThemedText } from '@/components/ThemedText'
 import { ThemedView } from '@/components/ThemedView'
 import { IconSymbol } from '@/components/ui/IconSymbol'
 
 export default function SettingsScreen() {
-  const { i18n, t } = useTranslation()
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'fr' : 'en'
-    i18n.changeLanguage(newLang)
-  }
+  const { t } = useTranslation()
+  const { language, setLanguage } = useSettingsStore()
 
   return (
     <ParallaxScrollView
@@ -32,9 +30,9 @@ export default function SettingsScreen() {
 
       <ThemedText>{t('settings:language')}</ThemedText>
       <Pressable
-        onPress={toggleLanguage}
+        onPress={() => setLanguage(language === 'en' ? 'fr' : 'en')}
         style={{ padding: 5, alignSelf: 'center', backgroundColor: 'lightgray', borderRadius: 5 }}>
-        <ThemedText>{i18n.language === 'en' ? t('languages.fr') : t('languages.en')}</ThemedText>
+        <ThemedText>{language === 'en' ? t('languages.fr') : t('languages.en')}</ThemedText>
       </Pressable>
     </ParallaxScrollView>
   )

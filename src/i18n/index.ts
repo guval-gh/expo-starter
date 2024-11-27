@@ -1,5 +1,9 @@
-import i18n, { InitOptions } from 'i18next'
+import i18n, { InitOptions, Module } from 'i18next'
 import { initReactI18next } from 'react-i18next'
+import { getLocales } from 'react-native-localize'
+
+import { zustandStorage } from '@/stores/settings'
+import { LocalesEnum, LocalesType, availableLocales } from '@/types/locales'
 
 import commonEn from './locales/en/common.json'
 import exploreEn from './locales/en/explore.json'
@@ -10,11 +14,29 @@ import exploreFr from './locales/fr/explore.json'
 import homeFr from './locales/fr/home.json'
 import settingsFr from './locales/fr/settings.json'
 
-export const availableLocales = ['en', 'fr']
-export type LocalesType = 'en' | 'fr'
-export enum LocalesEnum {
-  EN = 'en',
-  FR = 'fr'
+const languageDetector = {
+  type: 'languageDetector',
+  async: true,
+  init: () => {},
+  detect: async (callback: (language: LocalesType) => void) => {
+    try {
+      const savedLanguage = await zustandStorage.getItem('language')
+
+      if (savedLanguage) {
+        callback(savedLanguage as LocalesType)
+        return
+      }
+
+      callback(getLocales()[0].languageCode === 'fr' ? 'fr' : 'en')
+    } catch {
+      callback('en')
+    }
+  },
+  cacheUserLanguage: async (language: LocalesType) => {
+    try {
+      zustandStorage.setItem('language', language)
+    } catch {}
+  }
 }
 
 const i18nConfig: InitOptions = {
@@ -33,7 +55,7 @@ const i18nConfig: InitOptions = {
     }
   },
   supportedLngs: availableLocales,
-  fallbackLng: LocalesEnum.EN,
+  fallbackLng: LocalesEnum.en,
   ns: ['common', 'home', 'explore', 'settings'],
   defaultNS: 'common',
   interpolation: {
@@ -42,6 +64,9 @@ const i18nConfig: InitOptions = {
   returnNull: false
 }
 
-i18n.use(initReactI18next).init(i18nConfig)
+i18n
+  .use(languageDetector as Module)
+  .use(initReactI18next)
+  .init(i18nConfig)
 
 export default i18n

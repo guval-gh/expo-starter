@@ -1,6 +1,7 @@
 import { Image, Platform, StyleSheet } from 'react-native'
 
 import ReactLogo from '@/assets/images/react-logo.png'
+import ReactLogoSVG from '@/assets/images/react.svg'
 import { Collapsible } from '@/components/Collapsible'
 import { ExternalLink } from '@/components/ExternalLink'
 import ParallaxScrollView from '@/components/ParallaxScrollView'
@@ -51,6 +52,7 @@ export default function TabTwoScreen() {
           different screen densities
         </ThemedText>
         <Image source={ReactLogo} style={{ alignSelf: 'center' }} />
+        <ReactLogoSVG style={{ alignSelf: 'center' }} width={100} height={100} />
         <ExternalLink href="https://reactnative.dev/docs/images">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>

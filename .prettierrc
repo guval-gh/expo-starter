@@ -11,7 +11,7 @@
     "^(@react-navigation|expo-router)",
     "^(expo)",
     "^[a-zA-Z]",
-    "^(@/constants|@/stores|@/types|@/hooks|@/utils)",
+    "^(@/constants|@/stores|@/types|@/hooks|@/utils|@/i18n)",
     "^(@/app|@/assets|@/components)",
     "^[./]"
   ],

@@ -1,0 +1,11 @@
+{
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "tabs": {
+    "home": "Home",
+    "explore": "Explore",
+    "settings": "Settings"
+  }
+}

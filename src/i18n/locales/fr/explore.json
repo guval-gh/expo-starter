@@ -1,0 +1,35 @@
+{
+  "title": "Explorer",
+  "description": "Cette application inclut des exemples de code pour vous aider à démarrer.",
+  "fileRouting": {
+    "title": "Routage basé sur les fichiers",
+    "text1": "Cette application comporte deux écrans : {{screen1}} et {{screen2}}",
+    "text2": "Le fichier de mise en page dans {{layoutFile}} configure le navigateur par onglets.",
+    "learnMore": "En savoir plus"
+  },
+  "platformSupport": {
+    "title": "Support Android, iOS et web",
+    "text": "Vous pouvez ouvrir ce projet sur Android, iOS et le web. Pour ouvrir la version web, appuyez sur {{key}} dans le terminal exécutant ce projet."
+  },
+  "images": {
+    "title": "Images",
+    "text": "Pour les images statiques, vous pouvez utiliser les suffixes {{density2x}} et {{density3x}} pour fournir des fichiers pour différentes densités d'écran",
+    "learnMore": "En savoir plus"
+  },
+  "customFonts": {
+    "title": "Polices personnalisées",
+    "text": "Ouvrez {{layoutFile}} pour voir comment charger {{example}}",
+    "example": "des polices personnalisées comme celle-ci.",
+    "learnMore": "En savoir plus"
+  },
+  "themes": {
+    "title": "Composants en mode clair et sombre",
+    "text": "Ce modèle prend en charge les modes clair et sombre. Le hook {{hook}} vous permet d'examiner le thème de couleur actuel de l'utilisateur, vous permettant d'ajuster les couleurs de l'interface en conséquence.",
+    "learnMore": "En savoir plus"
+  },
+  "animations": {
+    "title": "Animations",
+    "text": "Ce modèle inclut un exemple de composant animé. Le composant {{component}} utilise la puissante bibliothèque {{library}} pour créer une animation de main qui salue.",
+    "iosText": "Le composant {{component}} fournit un effet de parallaxe pour l'image d'en-tête."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "welcome": "Bienvenue !",
+  "step1": {
+    "title": "Étape 1 : Essayez",
+    "edit": "Modifiez",
+    "toSeeChanges": "pour voir les changements.",
+    "press": "Appuyez sur",
+    "devTools": {
+      "ios": "cmd + d",
+      "android": "cmd + m",
+      "web": "F12"
+    },
+    "openDevTools": "pour ouvrir les outils de développement."
+  },
+  "step2": {
+    "title": "Étape 2 : Explorez",
+    "description": "Appuyez sur l'onglet Explorer pour en savoir plus sur ce qui est inclus dans cette application de démarrage."
+  },
+  "step3": {
+    "title": "Étape 3 : Nouveau départ",
+    "whenReady": "Quand vous êtes prêt, exécutez",
+    "getFresh": "pour obtenir un nouveau",
+    "directory": "répertoire. Cela déplacera le",
+    "to": "vers",
+    "command": "npm run reset-project",
+    "appDir": "app",
+    "exampleDir": "app-example"
+  }
+}

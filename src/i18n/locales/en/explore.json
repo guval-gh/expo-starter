@@ -1,0 +1,35 @@
+{
+  "title": "Explore",
+  "description": "This app includes example code to help you get started.",
+  "fileRouting": {
+    "title": "File-based routing",
+    "text1": "This app has two screens: {{screen1}} and {{screen2}}",
+    "text2": "The layout file in {{layoutFile}} sets up the tab navigator.",
+    "learnMore": "Learn more"
+  },
+  "platformSupport": {
+    "title": "Android, iOS, and web support",
+    "text": "You can open this project on Android, iOS, and the web. To open the web version, press {{key}} in the terminal running this project."
+  },
+  "images": {
+    "title": "Images",
+    "text": "For static images, you can use the {{density2x}} and {{density3x}} suffixes to provide files for different screen densities",
+    "learnMore": "Learn more"
+  },
+  "customFonts": {
+    "title": "Custom fonts",
+    "text": "Open {{layoutFile}} to see how to load {{example}}",
+    "example": "custom fonts such as this one.",
+    "learnMore": "Learn more"
+  },
+  "themes": {
+    "title": "Light and dark mode components",
+    "text": "This template has light and dark mode support. The {{hook}} hook lets you inspect what the user's current color scheme is, and so you can adjust UI colors accordingly.",
+    "learnMore": "Learn more"
+  },
+  "animations": {
+    "title": "Animations",
+    "text": "This template includes an example of an animated component. The {{component}} component uses the powerful {{library}} library to create a waving hand animation.",
+    "iosText": "The {{component}} component provides a parallax effect for the header image."
+  }
+}

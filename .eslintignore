@@ -1,6 +1,6 @@
 /.expo
 /.yarn
 android
-assets
+src/assets
 ios
 node_modules

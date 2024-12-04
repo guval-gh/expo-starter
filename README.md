@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# Expo/React Native Starter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Simple starter for Expo/React Native projects with minimal configuration to start your project.
 
-## Get started
+## Prerequisites
 
-1. Install dependencies
+- 🚧 Work in progress...
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- 🚧 Work in progress...
 
-   ```bash
-    npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+1. Get the project:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+_Don't forget to replace `your-project-name` with your actual project name._
 
 ```bash
-npm run reset-project
+git clone git@github.com:guval-gh/expo-starter.git your-project-name
+cd your-project-name
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Update remote branch:
 
-## Learn more
+```bash
+git remote set-url origin git@github.com:your-username/your-project-name.git
 
-To learn more about developing your project with Expo, look at the following resources:
+# To check if the config is ok
+git remote -v
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. Change the project name in `package.json` and `app.json`:
 
-## Join the community
+- `package.json`
 
-Join our community of developers creating universal apps.
+```json
+{
+  "name": "your-project-name"
+}
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- `app.json`
+
+```json
+{
+  "expo": {
+    "name": "Your Project Name",
+    "slug": "your-project-name",
+    // ...
+    "scheme": "your-project-name"
+    // ...
+  }
+}
+```
+
+4. Install dependencies:
+
+```bash
+yarn install
+```
+
+5. Generate the native code:
+
+```bash
+npx expo prebuild --clean
+```
+
+6. Run projet:
+
+```bash
+yarn ios
+yarn android
+```

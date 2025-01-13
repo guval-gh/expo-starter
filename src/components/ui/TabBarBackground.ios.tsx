@@ -1,6 +1,7 @@
+import { useContext } from 'react'
 import { StyleSheet } from 'react-native'
 
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs'
+import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs'
 
 import { BlurView } from 'expo-blur'
 
@@ -19,7 +20,7 @@ export default function BlurTabBarBackground() {
 }
 
 export function useBottomTabOverflow() {
-  const tabHeight = useBottomTabBarHeight()
+  const tabHeight = useContext(BottomTabBarHeightContext) ?? 0
   const { bottom } = useSafeAreaInsets()
   return tabHeight - bottom
 }
